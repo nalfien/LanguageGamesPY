@@ -23,8 +23,8 @@ def on_plain(event):
                 else:
                     lettArr = consonants
 
-                baseLettIdx = lettArr.index(char)
-                outChar = lettArr[idx % len(lettArr)]
+                lettIdx = lettArr.index(char) + idx
+                outChar = lettArr[lettIdx % len(lettArr)]
 
                 if isUpper:
                     outChar = outChar.upper()
